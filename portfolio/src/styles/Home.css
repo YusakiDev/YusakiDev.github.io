@@ -17,6 +17,33 @@
     border-radius: 10px;
     margin-bottom: 60px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(10px);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .hero h1 {
@@ -155,11 +182,6 @@ h3 {
     100% { transform: translateY(0px); }
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
 
 .animate-fade-in {
     animation: fadeIn 1s ease-out forwards;
@@ -200,13 +222,6 @@ h3 {
     visibility: hidden;
 }
 
-.animate-fade-in {
-    animation: fadeIn 1s ease-out forwards;
-}
-
-.animate-slide-up {
-    animation: slideUp 1s ease-out forwards;
-}
 
 @keyframes fadeIn {
     from { opacity: 0; visibility: hidden; }
@@ -225,4 +240,5 @@ h3 {
         visibility: visible;
     }
 }
+
 
