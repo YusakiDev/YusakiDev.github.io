@@ -1,34 +1,29 @@
+// src/App.js
 import React from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
-import {AppBar, Toolbar, Typography, Button, ThemeProvider, CssBaseline, createMuiTheme} from '@mui/material';
-
-const theme = createMuiTheme({
-    palette: {
-        primary: {
-            main: '#2196f3',
-        },
-        secondary: {
-            main: '#f50057',
-        },
-    },
-});
+import About from './components/About';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Contact from './components/Contact';
+import Footer from './components/Footer';  // Uncomment this if you create a Footer component
 
 function App() {
     return (
-        <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <Router>
-                <div className="App">
-                    <Header />
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        {/* Add more routes here */}
-                    </Routes>
-                </div>
-            </Router>
-        </ThemeProvider>
+        <Router>
+            <div className="App">
+                <Header />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/skills" element={<Skills />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
+                <Footer />
+            </div>
+        </Router>
     );
 }
 

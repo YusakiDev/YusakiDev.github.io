@@ -1,5 +1,5 @@
 import React from 'react';
-import {AppBar, Toolbar, Typography, Button, Container, Grid} from '@mui/material';
+import {Typography, Button, Container, Grid} from '@mui/material';
 
 function Home() {
     return (
