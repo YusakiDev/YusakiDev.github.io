@@ -12,12 +12,12 @@ function Home() {
             </Typography>
             <Grid container spacing={2}>
                 <Grid item>
-                    <Button variant="contained" color="primary" href="#projects">
+                    <Button variant="contained" color="primary" href="projects">
                         View My Projects
                     </Button>
                 </Grid>
                 <Grid item>
-                    <Button variant="outlined" color="primary" href="#about">
+                    <Button variant="outlined" color="primary" href="about">
                         Learn More About Me
                     </Button>
                 </Grid>

@@ -7,20 +7,25 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import Footer from './components/Footer';  // Uncomment this if you create a Footer component
+import Footer from './components/Footer';
+import './App.css';
 
 function App() {
     return (
         <Router>
             <div className="App">
-                <Header />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route path="/skills" element={<Skills />} />
-                    <Route path="/contact" element={<Contact />} />
-                </Routes>
+                <div className="content-wrap">
+                    <Header />
+                    <main>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/about" element={<About />} />
+                            <Route path="/projects" element={<Projects />} />
+                            <Route path="/skills" element={<Skills />} />
+                            <Route path="/contact" element={<Contact />} />
+                        </Routes>
+                    </main>
+                </div>
                 <Footer />
             </div>
         </Router>
